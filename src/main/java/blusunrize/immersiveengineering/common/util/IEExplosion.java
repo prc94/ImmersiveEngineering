@@ -103,6 +103,7 @@ public class IEExplosion extends Explosion
 					LootContext.Builder lootCtx = new LootContext.Builder((ServerWorld)this.world)
 							.withRandom(this.world.rand)
 							.withParameter(LootParameters.TOOL, ItemStack.EMPTY)
+							.withParameter(LootParameters.field_237457_g_, Vector3d.copy(pos))
 							.withNullableParameter(LootParameters.BLOCK_ENTITY, tile);
 					if(damagesTerrain==Explosion.Mode.DESTROY)
 						lootCtx.withParameter(LootParameters.EXPLOSION_RADIUS, this.size);
